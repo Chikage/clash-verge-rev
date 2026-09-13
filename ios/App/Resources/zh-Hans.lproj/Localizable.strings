@@ -19,6 +19,7 @@
 "Connections" = "连接数";
 "Connect" = "连接";
 "Disconnect" = "断开连接";
+"Your connection is controlled here." = "在此连接或断开代理。";
 "Connected" = "已连接";
 "Disconnected" = "未连接";
 "Connecting…" = "正在连接…";
@@ -35,6 +36,8 @@
 "The active profile has changed. Return to the proxy list." = "当前配置已更改，请返回代理列表。";
 "%lld ms" = "%lld 毫秒";
 "Timeout" = "超时";
+"Testing…" = "正在测试…";
+"Not measured" = "尚未测试";
 "Test latency for %@" = "测试 %@ 的延迟";
 "Add your first profile" = "添加第一个配置";
 "Import a Clash YAML subscription or choose a configuration from Files." = "导入 Clash YAML 订阅，或从「文件」中选择配置。";

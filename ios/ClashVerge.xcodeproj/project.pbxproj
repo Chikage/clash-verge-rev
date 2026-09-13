@@ -15,6 +15,7 @@
 		340AC55A7E6239A9E2515D17 /* MihomoCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED8C3057978F0DEFF91A08D /* MihomoCore.xcframework */; };
 		34946CF5F0CB171B80C475AF /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1930D5D403402EB44A9D76 /* NetworkExtension.framework */; };
 		3A1DFE4D565C321D14785196 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 719005B1C4A38167FD01A755 /* Localizable.strings */; };
+		4DD5A2A12BA0AB6C2A899A2A /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E491CFEFFF021C0EFBE7CB2 /* AppTheme.swift */; };
 		4F7FAA75BFB4F6C08A7D4035 /* TunnelConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648ABC3DB986CACB6D7AE06 /* TunnelConfigurationStore.swift */; };
 		5CEBEF31629F8D8D264B5F4F /* ClashVergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5AE620CAAC6189472868A3 /* ClashVergeApp.swift */; };
 		6694766C329B0EEBD210C399 /* PacketBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A926E2BB4A595EBE393E8 /* PacketBridge.swift */; };
@@ -83,6 +84,7 @@
 		4A5FCB1697068D0BBDDBB74E /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		4DE2CD208EB2C700EB9CE010 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4E4A926E2BB4A595EBE393E8 /* PacketBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketBridge.swift; sourceTree = "<group>"; };
+		5E491CFEFFF021C0EFBE7CB2 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		65C051FA992583824BF453AF /* TunnelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelController.swift; sourceTree = "<group>"; };
 		6AE1001DBF48F8423F8A24E4 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		719005B1C4A38167FD01A755 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		9CE3C2BF91DE3B707B77EC50 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E491CFEFFF021C0EFBE7CB2 /* AppTheme.swift */,
 				4178DFEADFFAD3CE7833E1D2 /* ContentView.swift */,
 				42CE79BD9BBF9B45F94EF94C /* DashboardView.swift */,
 				E9F3251443B9F2614453E0F2 /* ProfilesView.swift */,
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52521D0C89441D7301D1000 /* AppStore.swift in Sources */,
+				4DD5A2A12BA0AB6C2A899A2A /* AppTheme.swift in Sources */,
 				5CEBEF31629F8D8D264B5F4F /* ClashVergeApp.swift in Sources */,
 				135421385F9059C70153476E /* ContentView.swift in Sources */,
 				F1B6AB431E1A069856993E37 /* DashboardView.swift in Sources */,

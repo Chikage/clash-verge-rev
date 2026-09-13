@@ -10,31 +10,35 @@ struct ProxiesView: View {
                     Label("No proxy groups", systemImage: "network")
                 } description: {
                     Text("Select a profile to view its proxy groups. Provider nodes become available after connecting.")
+                        .foregroundStyle(AppTheme.secondaryText)
                 }
             } else {
                 List {
                     if !store.isConnected {
                         Text("Your selections will be applied when you connect. Connect to measure latency and load provider nodes.")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
+                            .font(.subheadline)
+                            .foregroundStyle(AppTheme.secondaryText)
+                            .lineSpacing(3)
                     }
                     ForEach(store.groups) { group in
                         NavigationLink {
                             ProxyGroupView(groupName: group.name)
                         } label: {
-                            VStack(alignment: .leading, spacing: 5) {
+                            VStack(alignment: .leading, spacing: 8) {
                                 Text(group.name).font(.headline)
                                 Text(group.now ?? String(localized: "No selection"))
                                     .font(.subheadline)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(group.now == nil ? AppTheme.secondaryText : AppTheme.accent)
                                 Text(group.type)
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .font(.footnote)
+                                    .foregroundStyle(AppTheme.secondaryText)
                             }
-                            .padding(.vertical, 3)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.vertical, 6)
                         }
                     }
                 }
+                .listStyle(.insetGrouped)
             }
         }
         .navigationTitle("Proxies")
@@ -52,17 +56,20 @@ private struct ProxyGroupView: View {
                 List {
                     if !group.canSelect {
                         Text("This group selects its proxy automatically.")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
+                            .font(.subheadline)
+                            .foregroundStyle(AppTheme.secondaryText)
+                            .lineSpacing(3)
                     }
                     if group.all.isEmpty {
                         Text("No nodes are available in this group. Connect to load any configured proxy providers.")
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppTheme.secondaryText)
+                            .lineSpacing(3)
                     }
                     ForEach(Array(group.all.enumerated()), id: \.offset) { _, node in
                         ProxyNodeRow(group: group, node: node)
                     }
                 }
+                .listStyle(.insetGrouped)
             } else {
                 ContentUnavailableView("Group unavailable", systemImage: "network", description:
                     Text("The active profile has changed. Return to the proxy list.")
@@ -76,29 +83,41 @@ private struct ProxyGroupView: View {
 
 private struct ProxyNodeRow: View {
     @Environment(AppStore.self) private var store
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var isTesting = false
     let group: ProxyGroup
     let node: String
 
+    private var isSelected: Bool { group.now == node }
+
     var body: some View {
-        HStack(spacing: 12) {
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: 4))
+            : AnyLayout(HStackLayout(spacing: 12))
+
+        layout {
             Button {
                 Task { await store.selectProxy(group: group.name, node: node) }
             } label: {
-                HStack(spacing: 10) {
-                    Image(systemName: group.now == node ? "checkmark.circle.fill" : "circle")
-                        .foregroundStyle(group.now == node ? Color.purple : Color.secondary)
+                HStack(alignment: .top, spacing: 10) {
+                    Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(isSelected ? AppTheme.accent : AppTheme.secondaryText)
+                        .padding(.top, 2)
+                        .accessibilityHidden(true)
                     Text(node)
-                        .foregroundStyle(.primary)
+                        .fontWeight(isSelected ? .semibold : .regular)
+                        .foregroundStyle(isSelected ? AppTheme.accent : Color.primary)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
+                .frame(minHeight: 44)
                 .padding(.vertical, 8)
                 .contentShape(Rectangle())
             }
             .buttonStyle(.borderless)
             .disabled(!group.canSelect || store.isBusy)
-            .accessibilityAddTraits(group.now == node ? .isSelected : [])
+            .accessibilityAddTraits(isSelected ? .isSelected : [])
             Button {
                 isTesting = true
                 Task {
@@ -106,22 +125,40 @@ private struct ProxyNodeRow: View {
                     isTesting = false
                 }
             } label: {
-                if isTesting {
-                    ProgressView()
-                } else if let delay = store.delays[node] {
-                    if delay > 0 {
-                        Text("\(delay) ms").font(.caption.monospacedDigit())
+                Group {
+                    if isTesting {
+                        ProgressView()
+                    } else if let delay = store.delays[node] {
+                        if delay > 0 {
+                            Text("\(delay) ms")
+                                .foregroundStyle(delay >= 300 ? AppTheme.warning : AppTheme.success)
+                        } else {
+                            Text("Timeout")
+                                .foregroundStyle(AppTheme.error)
+                        }
                     } else {
-                        Text("Timeout").font(.caption)
+                        Image(systemName: "waveform.path.ecg")
+                            .foregroundStyle(AppTheme.accent)
                     }
-                } else {
-                    Image(systemName: "waveform.path.ecg")
                 }
+                .font(.subheadline.monospacedDigit())
+                .frame(minWidth: 44, minHeight: 44)
+                .fixedSize(horizontal: true, vertical: false)
+                .contentShape(Rectangle())
             }
-            .frame(minWidth: 44, minHeight: 44)
             .buttonStyle(.borderless)
             .disabled(!store.isConnected || isTesting || store.isBusy)
             .accessibilityLabel("Test latency for \(node)")
+            .accessibilityValue(latencyValue)
         }
+        .listRowBackground(isSelected ? AppTheme.accent.opacity(0.08) : Color(uiColor: .secondarySystemGroupedBackground))
+    }
+
+    private var latencyValue: Text {
+        if isTesting { return Text("Testing…") }
+        if let delay = store.delays[node] {
+            return delay > 0 ? Text("\(delay) ms") : Text("Timeout")
+        }
+        return Text("Not measured")
     }
 }

@@ -19,7 +19,6 @@ struct ContentView: View {
                     .tabItem { Label("Settings", systemImage: "gearshape") }
             }
         }
-        .tint(.purple)
     }
 }
 
@@ -30,18 +29,26 @@ private struct ErrorBanner: View {
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "exclamationmark.circle.fill")
-                .foregroundStyle(.red)
+                .foregroundStyle(AppTheme.error)
                 .accessibilityHidden(true)
             Text(message)
                 .font(.callout)
+                .foregroundStyle(.primary)
+                .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .textSelection(.enabled)
-            Button("Dismiss", systemImage: "xmark", action: dismiss)
-                .labelStyle(.iconOnly)
-                .frame(minWidth: 44, minHeight: 44)
+            Button(action: dismiss) {
+                Label("Dismiss", systemImage: "xmark")
+                    .labelStyle(.iconOnly)
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .foregroundStyle(AppTheme.secondaryText)
         }
         .padding()
-        .background(.red.opacity(0.08))
+        .background(.background)
+        .overlay(alignment: .bottom) { Divider() }
         .accessibilityElement(children: .contain)
     }
 }

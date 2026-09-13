@@ -9,7 +9,7 @@ struct ClashVergeApp: App {
         WindowGroup {
             ContentView()
                 .environment(store)
-                .tint(.purple)
+                .tint(AppTheme.accent)
                 .task { await store.prepare() }
                 .task(id: scenePhase) {
                     guard scenePhase == .active else { return }

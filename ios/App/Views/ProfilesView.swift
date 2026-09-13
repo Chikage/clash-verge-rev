@@ -14,9 +14,12 @@ struct ProfilesView: View {
                     Label("Add your first profile", systemImage: "doc.badge.plus")
                 } description: {
                     Text("Import a Clash YAML subscription or choose a configuration from Files.")
+                        .foregroundStyle(AppTheme.secondaryText)
                 } actions: {
                     Button("Add subscription") { showsSubscription = true }
                         .buttonStyle(.borderedProminent)
+                        .tint(AppTheme.action)
+                        .foregroundStyle(.white)
                         .disabled(store.isBusy)
                     Button("Import file") { showsFileImporter = true }
                         .disabled(store.isBusy)
@@ -27,6 +30,7 @@ struct ProfilesView: View {
                         ProfileRow(profile: profile) { profileToDelete = profile }
                     }
                 }
+                .listStyle(.insetGrouped)
             }
         }
         .navigationTitle("Profiles")
@@ -80,18 +84,24 @@ private struct ProfileRow: View {
     let profile: ClashProfile
     let delete: () -> Void
 
+    private var isSelected: Bool { store.profiles.selectedID == profile.id }
+
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             Button {
                 Task { await store.selectProfile(profile) }
             } label: {
                 HStack(alignment: .top, spacing: 12) {
-                    Image(systemName: store.profiles.selectedID == profile.id ? "checkmark.circle.fill" : "circle")
-                        .foregroundStyle(store.profiles.selectedID == profile.id ? Color.purple : Color.secondary)
+                    Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(isSelected ? AppTheme.accent : AppTheme.secondaryText)
                         .padding(.top, 3)
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(profile.name).font(.headline).foregroundStyle(.primary)
+                        .accessibilityHidden(true)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(profile.name)
+                            .font(.headline)
+                            .foregroundStyle(isSelected ? AppTheme.accent : Color.primary)
                         Text(profile.sourceURL?.host ?? String(localized: "Local file"))
+                            .font(.subheadline)
                         Text("Updated \(profile.updatedAt.formatted(date: .abbreviated, time: .shortened))")
                         if let usage = profile.usage {
                             Text("Used \(ByteCountFormatter.string(fromByteCount: usage.usedBytes, countStyle: .binary)) of \(ByteCountFormatter.string(fromByteCount: usage.total, countStyle: .binary))")
@@ -100,17 +110,19 @@ private struct ProfileRow: View {
                             }
                         }
                     }
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.secondaryText)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
                 }
-                .padding(.vertical, 6)
+                .frame(minHeight: 44)
+                .padding(.vertical, 8)
                 .contentShape(Rectangle())
             }
             .buttonStyle(.borderless)
             .disabled(store.isBusy)
-            .accessibilityAddTraits(store.profiles.selectedID == profile.id ? .isSelected : [])
+            .accessibilityAddTraits(isSelected ? .isSelected : [])
             Menu {
                 if profile.sourceURL != nil {
                     Button("Update subscription", systemImage: "arrow.clockwise") {
@@ -120,11 +132,14 @@ private struct ProfileRow: View {
                 Button("Delete", systemImage: "trash", role: .destructive, action: delete)
             } label: {
                 Image(systemName: "ellipsis.circle")
+                    .foregroundStyle(AppTheme.accent)
                     .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
             }
             .disabled(store.isBusy)
             .accessibilityLabel("Actions for \(profile.name)")
         }
+        .listRowBackground(isSelected ? AppTheme.accent.opacity(0.08) : Color(uiColor: .secondarySystemGroupedBackground))
     }
 }
 
@@ -139,19 +154,27 @@ private struct SubscriptionImportView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("Name (optional)", text: $name)
-                    TextField("Subscription URL", text: $url, axis: .vertical)
+                    TextField("Name (optional)", text: $name, prompt:
+                        Text("Name (optional)").foregroundStyle(AppTheme.secondaryText)
+                    )
+                    TextField("Subscription URL", text: $url, prompt:
+                        Text("Subscription URL").foregroundStyle(AppTheme.secondaryText), axis: .vertical
+                    )
                         .keyboardType(.URL)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .privacySensitive()
                 } footer: {
                     Text("Use a subscription URL that returns a complete Clash YAML configuration.")
+                        .font(.subheadline)
+                        .foregroundStyle(AppTheme.secondaryText)
+                        .lineSpacing(3)
                 }
                 if let message = store.errorMessage {
                     Section {
                         Label(message, systemImage: "exclamationmark.circle")
-                            .foregroundStyle(.red)
+                            .foregroundStyle(AppTheme.error)
+                            .fixedSize(horizontal: false, vertical: true)
                             .textSelection(.enabled)
                     }
                 }

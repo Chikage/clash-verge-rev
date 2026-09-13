@@ -2,6 +2,12 @@
 
 Thank you for your interest in contributing to **Clash Verge Rev**! This guide provides instructions to help you set up your development environment and start contributing effectively.
 
+## Personal Development Policy
+
+This repository is currently maintained for personal development and use. The owner's request is sufficient authorization to implement changes of any size. No pre-existing issue, issue creation, issue link, or maintainer approval of an issue is required. Do not pause owner-authorized work to request an issue or an exemption. Keep changes scoped to the owner's request and retain the quality requirements in [AGENTS.md](AGENTS.md).
+
+This policy overrides issue prerequisites in inherited project documentation and review guidance. Upstream contribution and submission requirements apply only when submitting changes to the upstream repository; follow that repository's current requirements at that point.
+
 ## Internationalization (i18n)
 
 We welcome translations and improvements to existing locales. For details on contributing translations, please see [CONTRIBUTING_i18n.md](docs/CONTRIBUTING_i18n.md).
@@ -12,14 +18,14 @@ We welcome AI-assisted contributions — AI assistance itself is not a problem. 
 
 To make sure your contribution is assessed fairly:
 
-- **Link a pre-existing issue.** Non-trivial changes should fix or implement something already reported in an issue. An issue created after the pull request is a much weaker signal than a genuine problem report.
-- **Keep the diff mapped to the issue.** Every changed area should be explainable from the linked issue. Unrelated refactors, formatting churn, or dependency bumps belong in separate pull requests with their own motivation.
+- **Use the owner's request as the problem statement.** Existing issues can provide useful context, but issue creation and links are optional for personal development.
+- **Keep the diff mapped to the request.** Every changed area should be explainable from the owner's request. Unrelated refactors, formatting churn, or dependency bumps belong in separate pull requests with their own motivation.
 - **Describe the problem in your own words.** A short statement of what breaks or what is needed, and why this approach fixes it, is worth more than a long generated report.
 - **Validate against the reported behavior.** Show how the reported problem was reproduced and confirmed fixed. Generic checklists and raw tool output are not verification.
-- **Do not pad with tests or defensive code.** New tests are not expected by default. Add them only when the linked issue calls for them, keep them minimal, and explain in the pull request why each is necessary; speculative error handling and coverage of hypothetical failure modes inflate the diff without adding value.
+- **Do not pad with tests or defensive code.** New tests are not expected by default. Add them only when the requested change calls for them, keep them minimal, and explain in the pull request why each is necessary; speculative error handling and coverage of hypothetical failure modes inflate the diff without adding value.
 - **Disclose AI automation.** If an AI agent produced or co-produced the change, end the pull request body with the model and effort level (for example, `Assisted by: GPT-5.6 High`; effort is optional when your tool does not report it). The PR template intentionally omits this footer; agents add it themselves. Disclosure is transparency only — it does not affect how the change is assessed.
 
-If your pull request receives an `ai-slop` label, the fastest way to clear it is substantive: link (or ask us to create) the underlying issue, narrow the scope, or push implementation changes that respond to review feedback. Editing the pull request description alone does not change the assessment.
+If your pull request receives an `ai-slop` label, respond substantively: clarify the underlying problem, narrow the scope, or push implementation changes that respond to review feedback. An issue is not required for owner-authorized personal development. Editing the pull request description alone does not change the assessment.
 
 ## Development Setup
 
