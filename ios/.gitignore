@@ -1,0 +1,5 @@
+Vendor/
+.build/
+*.xcuserstate
+xcuserdata/
+Config/Local.xcconfig

@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03E1F6973232ADFEE8288EC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DF33B948ACE063E08AB10E /* Security.framework */; };
+		135421385F9059C70153476E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4178DFEADFFAD3CE7833E1D2 /* ContentView.swift */; };
+		15AC59EAD315C62418EDB220 /* ProfileConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1E26DFF0D2FD0EAE6DF7F /* ProfileConfiguration.swift */; };
+		2B889FF14DC1D5E8CBCC880C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4850C00AA7BDF068BC2AE /* Models.swift */; };
+		2C67F5462D30CC6C5BBCFB12 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E3F280CE2ABED05005F78 /* PacketTunnelProvider.swift */; };
+		340AC55A7E6239A9E2515D17 /* MihomoCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED8C3057978F0DEFF91A08D /* MihomoCore.xcframework */; };
+		34946CF5F0CB171B80C475AF /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1930D5D403402EB44A9D76 /* NetworkExtension.framework */; };
+		3A1DFE4D565C321D14785196 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 719005B1C4A38167FD01A755 /* Localizable.strings */; };
+		4F7FAA75BFB4F6C08A7D4035 /* TunnelConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648ABC3DB986CACB6D7AE06 /* TunnelConfigurationStore.swift */; };
+		5CEBEF31629F8D8D264B5F4F /* ClashVergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5AE620CAAC6189472868A3 /* ClashVergeApp.swift */; };
+		6694766C329B0EEBD210C399 /* PacketBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A926E2BB4A595EBE393E8 /* PacketBridge.swift */; };
+		673254EB3C67CD6E8EC0F20C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4850C00AA7BDF068BC2AE /* Models.swift */; };
+		6DE1FE5128BBF12D196EE1EC /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 99B769896952BC41B06A55A8 /* Yams */; };
+		70C9B738681C1ED8DA1A3981 /* CoreRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F970CFF7D37B105F4D98B7 /* CoreRuntime.swift */; };
+		7D33170C67B57E58D7D91278 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F77DF41FC52D2777761FA /* SystemConfiguration.framework */; };
+		7E525EAC3BFADBCCF860C36E /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FCB1697068D0BBDDBB74E /* ProfileRepository.swift */; };
+		7F4CE43F4A48F27910141BA4 /* TunnelConfigurationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49373EEB2600C734C8565EB /* TunnelConfigurationStoreTests.swift */; };
+		83892A1CB4A9105A1A4E84BC /* SubscriptionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429560A330C71FB659BCE72D /* SubscriptionClient.swift */; };
+		8FEBF221FF7D5154B0631B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8951D12EC5CAC79120665A40 /* Assets.xcassets */; };
+		B7F79E58F54C787BF16DF207 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2CD208EB2C700EB9CE010 /* SettingsView.swift */; };
+		B8571F8634EE5D992808AFFF /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3251443B9F2614453E0F2 /* ProfilesView.swift */; };
+		C15F7DDC0E091C925AC1F4AB /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AEFD6CFD8EE59BF80D59319C /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C52521D0C89441D7301D1000 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1001DBF48F8423F8A24E4 /* AppStore.swift */; };
+		CEE7FF5D72C1A3B0C7217500 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1930D5D403402EB44A9D76 /* NetworkExtension.framework */; };
+		CFADD595368DE6FEA88F116A /* TunnelConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648ABC3DB986CACB6D7AE06 /* TunnelConfigurationStore.swift */; };
+		D0A435DB24FB633E4A552C37 /* ProxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1DA6FA9145046DCC9489A /* ProxiesView.swift */; };
+		F1B6AB431E1A069856993E37 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CE79BD9BBF9B45F94EF94C /* DashboardView.swift */; };
+		F60B451D863C36720DE133BE /* TunnelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C051FA992583824BF453AF /* TunnelController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C67154AC2128E84B3BBC211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA520A6F1B1529099A7C2D97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 182FAEBE0DF8A572CDF8D281;
+			remoteInfo = PacketTunnel;
+		};
+		743E675947DEF139E5500091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA520A6F1B1529099A7C2D97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 851249FED2A7DFBA356B1579;
+			remoteInfo = ClashVerge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78F660AC1E8FD8164F981089 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C15F7DDC0E091C925AC1F4AB /* PacketTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02C4850C00AA7BDF068BC2AE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0A1F77DF41FC52D2777761FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0D7BB3CD9F77015CAE0EA2CB /* ClashVerge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClashVerge.entitlements; sourceTree = "<group>"; };
+		1C5AE620CAAC6189472868A3 /* ClashVergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashVergeApp.swift; sourceTree = "<group>"; };
+		311E3F280CE2ABED05005F78 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		3ED8C3057978F0DEFF91A08D /* MihomoCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MihomoCore.xcframework; path = Vendor/MihomoCore.xcframework; sourceTree = "<group>"; };
+		3FA6296B08E795BCE7EC5407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4178DFEADFFAD3CE7833E1D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		429560A330C71FB659BCE72D /* SubscriptionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionClient.swift; sourceTree = "<group>"; };
+		42CE79BD9BBF9B45F94EF94C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		43DF33B948ACE063E08AB10E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A5FCB1697068D0BBDDBB74E /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		4DE2CD208EB2C700EB9CE010 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4E4A926E2BB4A595EBE393E8 /* PacketBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketBridge.swift; sourceTree = "<group>"; };
+		65C051FA992583824BF453AF /* TunnelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelController.swift; sourceTree = "<group>"; };
+		6AE1001DBF48F8423F8A24E4 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		719005B1C4A38167FD01A755 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		82D6FB55CCD4D93D7BFDE7D7 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		84F970CFF7D37B105F4D98B7 /* CoreRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRuntime.swift; sourceTree = "<group>"; };
+		8951D12EC5CAC79120665A40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AEBA547D7D7E4A8AB14A410 /* ClashVergeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ClashVergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3EBEF87CF037D0B267168B1 /* ClashVerge.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ClashVerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEFD6CFD8EE59BF80D59319C /* PacketTunnel.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0126602B3EA09E9CF5A7538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E0A1DA6FA9145046DCC9489A /* ProxiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxiesView.swift; sourceTree = "<group>"; };
+		E2C1E26DFF0D2FD0EAE6DF7F /* ProfileConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfiguration.swift; sourceTree = "<group>"; };
+		E9F3251443B9F2614453E0F2 /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
+		F49373EEB2600C734C8565EB /* TunnelConfigurationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelConfigurationStoreTests.swift; sourceTree = "<group>"; };
+		F648ABC3DB986CACB6D7AE06 /* TunnelConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelConfigurationStore.swift; sourceTree = "<group>"; };
+		FA1930D5D403402EB44A9D76 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11F61218475F14EF750FCBDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340AC55A7E6239A9E2515D17 /* MihomoCore.xcframework in Frameworks */,
+				34946CF5F0CB171B80C475AF /* NetworkExtension.framework in Frameworks */,
+				03E1F6973232ADFEE8288EC0 /* Security.framework in Frameworks */,
+				7D33170C67B57E58D7D91278 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E612ADA92243B19A3A08A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DE1FE5128BBF12D196EE1EC /* Yams in Frameworks */,
+				CEE7FF5D72C1A3B0C7217500 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22399128AB5F18DD929AD2DF = {
+			isa = PBXGroup;
+			children = (
+				59E0B01FB713E9067F8E3273 /* App */,
+				57B66AE56BF65A4B51CE917C /* PacketTunnel */,
+				A5EC8A1B0F1DACE8FC425664 /* Shared */,
+				285E586DD985366957A0726B /* Tests */,
+				918684975C4439683269B1E8 /* Frameworks */,
+				946A7787F32E33EB4C3AA62B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		285E586DD985366957A0726B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49373EEB2600C734C8565EB /* TunnelConfigurationStoreTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		57B66AE56BF65A4B51CE917C /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				84F970CFF7D37B105F4D98B7 /* CoreRuntime.swift */,
+				3FA6296B08E795BCE7EC5407 /* Info.plist */,
+				4E4A926E2BB4A595EBE393E8 /* PacketBridge.swift */,
+				82D6FB55CCD4D93D7BFDE7D7 /* PacketTunnel.entitlements */,
+				311E3F280CE2ABED05005F78 /* PacketTunnelProvider.swift */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		59E0B01FB713E9067F8E3273 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6AE1001DBF48F8423F8A24E4 /* AppStore.swift */,
+				8951D12EC5CAC79120665A40 /* Assets.xcassets */,
+				0D7BB3CD9F77015CAE0EA2CB /* ClashVerge.entitlements */,
+				1C5AE620CAAC6189472868A3 /* ClashVergeApp.swift */,
+				C0126602B3EA09E9CF5A7538 /* Info.plist */,
+				4A5FCB1697068D0BBDDBB74E /* ProfileRepository.swift */,
+				429560A330C71FB659BCE72D /* SubscriptionClient.swift */,
+				65C051FA992583824BF453AF /* TunnelController.swift */,
+				EB2E395824DCD41B95409EB9 /* Resources */,
+				9CE3C2BF91DE3B707B77EC50 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		918684975C4439683269B1E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ED8C3057978F0DEFF91A08D /* MihomoCore.xcframework */,
+				FA1930D5D403402EB44A9D76 /* NetworkExtension.framework */,
+				43DF33B948ACE063E08AB10E /* Security.framework */,
+				0A1F77DF41FC52D2777761FA /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		946A7787F32E33EB4C3AA62B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3EBEF87CF037D0B267168B1 /* ClashVerge.app */,
+				9AEBA547D7D7E4A8AB14A410 /* ClashVergeTests.xctest */,
+				AEFD6CFD8EE59BF80D59319C /* PacketTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CE3C2BF91DE3B707B77EC50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4178DFEADFFAD3CE7833E1D2 /* ContentView.swift */,
+				42CE79BD9BBF9B45F94EF94C /* DashboardView.swift */,
+				E9F3251443B9F2614453E0F2 /* ProfilesView.swift */,
+				E0A1DA6FA9145046DCC9489A /* ProxiesView.swift */,
+				4DE2CD208EB2C700EB9CE010 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5EC8A1B0F1DACE8FC425664 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				02C4850C00AA7BDF068BC2AE /* Models.swift */,
+				E2C1E26DFF0D2FD0EAE6DF7F /* ProfileConfiguration.swift */,
+				F648ABC3DB986CACB6D7AE06 /* TunnelConfigurationStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EB2E395824DCD41B95409EB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				719005B1C4A38167FD01A755 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		182FAEBE0DF8A572CDF8D281 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48CF28027C6DB8026E2ACE3A /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				F868F8211D7715098C481016 /* Sources */,
+				11F61218475F14EF750FCBDF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			packageProductDependencies = (
+			);
+			productName = PacketTunnel;
+			productReference = AEFD6CFD8EE59BF80D59319C /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		851249FED2A7DFBA356B1579 /* ClashVerge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 727EAFE542D50B948E3976B6 /* Build configuration list for PBXNativeTarget "ClashVerge" */;
+			buildPhases = (
+				1E52DE2E69ACD6AA989E9CF8 /* Sources */,
+				CDB88047F8359F994113EE6C /* Resources */,
+				9E612ADA92243B19A3A08A20 /* Frameworks */,
+				78F660AC1E8FD8164F981089 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F20058C609C5AD98AEB5E40 /* PBXTargetDependency */,
+			);
+			name = ClashVerge;
+			packageProductDependencies = (
+				99B769896952BC41B06A55A8 /* Yams */,
+			);
+			productName = ClashVerge;
+			productReference = A3EBEF87CF037D0B267168B1 /* ClashVerge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BE5F7C038C573C4F429B57F /* ClashVergeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6E7B7968A4A2C353FA822AE /* Build configuration list for PBXNativeTarget "ClashVergeTests" */;
+			buildPhases = (
+				69ED1967F20AD24EE5B3208A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF22B6ED8722634499FB242D /* PBXTargetDependency */,
+			);
+			name = ClashVergeTests;
+			packageProductDependencies = (
+			);
+			productName = ClashVergeTests;
+			productReference = 9AEBA547D7D7E4A8AB14A410 /* ClashVergeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA520A6F1B1529099A7C2D97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					182FAEBE0DF8A572CDF8D281 = {
+						DevelopmentTeam = B963P7JMRA;
+						ProvisioningStyle = Automatic;
+					};
+					851249FED2A7DFBA356B1579 = {
+						DevelopmentTeam = B963P7JMRA;
+						ProvisioningStyle = Automatic;
+					};
+					9BE5F7C038C573C4F429B57F = {
+						DevelopmentTeam = B963P7JMRA;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 35B75C1F6C6EC25025CBED1D /* Build configuration list for PBXProject "ClashVerge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 22399128AB5F18DD929AD2DF;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A818FEC54296E7D8F8FABBFB /* XCRemoteSwiftPackageReference "Yams" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 946A7787F32E33EB4C3AA62B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				851249FED2A7DFBA356B1579 /* ClashVerge */,
+				9BE5F7C038C573C4F429B57F /* ClashVergeTests */,
+				182FAEBE0DF8A572CDF8D281 /* PacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDB88047F8359F994113EE6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEBF221FF7D5154B0631B01 /* Assets.xcassets in Resources */,
+				3A1DFE4D565C321D14785196 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E52DE2E69ACD6AA989E9CF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52521D0C89441D7301D1000 /* AppStore.swift in Sources */,
+				5CEBEF31629F8D8D264B5F4F /* ClashVergeApp.swift in Sources */,
+				135421385F9059C70153476E /* ContentView.swift in Sources */,
+				F1B6AB431E1A069856993E37 /* DashboardView.swift in Sources */,
+				2B889FF14DC1D5E8CBCC880C /* Models.swift in Sources */,
+				15AC59EAD315C62418EDB220 /* ProfileConfiguration.swift in Sources */,
+				7E525EAC3BFADBCCF860C36E /* ProfileRepository.swift in Sources */,
+				B8571F8634EE5D992808AFFF /* ProfilesView.swift in Sources */,
+				D0A435DB24FB633E4A552C37 /* ProxiesView.swift in Sources */,
+				B7F79E58F54C787BF16DF207 /* SettingsView.swift in Sources */,
+				83892A1CB4A9105A1A4E84BC /* SubscriptionClient.swift in Sources */,
+				CFADD595368DE6FEA88F116A /* TunnelConfigurationStore.swift in Sources */,
+				F60B451D863C36720DE133BE /* TunnelController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69ED1967F20AD24EE5B3208A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4CE43F4A48F27910141BA4 /* TunnelConfigurationStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F868F8211D7715098C481016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C9B738681C1ED8DA1A3981 /* CoreRuntime.swift in Sources */,
+				673254EB3C67CD6E8EC0F20C /* Models.swift in Sources */,
+				6694766C329B0EEBD210C399 /* PacketBridge.swift in Sources */,
+				2C67F5462D30CC6C5BBCFB12 /* PacketTunnelProvider.swift in Sources */,
+				4F7FAA75BFB4F6C08A7D4035 /* TunnelConfigurationStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F20058C609C5AD98AEB5E40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 182FAEBE0DF8A572CDF8D281 /* PacketTunnel */;
+			targetProxy = 3C67154AC2128E84B3BBC211 /* PBXContainerItemProxy */;
+		};
+		EF22B6ED8722634499FB242D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 851249FED2A7DFBA356B1579 /* ClashVerge */;
+			targetProxy = 743E675947DEF139E5500091 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3E7373202F236CDDB1324A23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B963P7JMRA;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERGE_APP_GROUP = "group.$(VERGE_BUNDLE_ID)";
+				VERGE_BUNDLE_ID = io.github.chikage.clashverge.ios;
+			};
+			name = Debug;
+		};
+		80D901E18121A196FCD6806B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Vendor\"",
+				);
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VERGE_BUNDLE_ID).PacketTunnel";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Core/SwihomoCore.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D5DDC5DDC11ABB83408716A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VERGE_BUNDLE_ID).tests";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClashVerge.app/ClashVerge";
+			};
+			name = Debug;
+		};
+		B19BF4272DD3F904B649F2CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Vendor\"",
+				);
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VERGE_BUNDLE_ID).PacketTunnel";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Core/SwihomoCore.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B2CD4BA05E48017140B4A998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B963P7JMRA;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERGE_APP_GROUP = "group.$(VERGE_BUNDLE_ID)";
+				VERGE_BUNDLE_ID = io.github.chikage.clashverge.ios;
+			};
+			name = Release;
+		};
+		BDF9BBAA64D06A850B92176A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/ClashVerge.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VERGE_BUNDLE_ID)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA31857BC996549134FAC7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VERGE_BUNDLE_ID).tests";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClashVerge.app/ClashVerge";
+			};
+			name = Release;
+		};
+		F873FD7E3B4C8DE90385AFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/ClashVerge.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VERGE_BUNDLE_ID)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35B75C1F6C6EC25025CBED1D /* Build configuration list for PBXProject "ClashVerge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7373202F236CDDB1324A23 /* Debug */,
+				B2CD4BA05E48017140B4A998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		48CF28027C6DB8026E2ACE3A /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D901E18121A196FCD6806B /* Debug */,
+				B19BF4272DD3F904B649F2CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		727EAFE542D50B948E3976B6 /* Build configuration list for PBXNativeTarget "ClashVerge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F873FD7E3B4C8DE90385AFBA /* Debug */,
+				BDF9BBAA64D06A850B92176A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C6E7B7968A4A2C353FA822AE /* Build configuration list for PBXNativeTarget "ClashVergeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D5DDC5DDC11ABB83408716A /* Debug */,
+				CA31857BC996549134FAC7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A818FEC54296E7D8F8FABBFB /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = revision;
+				revision = 3d6871d5b4a5cd519adf233fbb576e0a2af71c17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99B769896952BC41B06A55A8 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A818FEC54296E7D8F8FABBFB /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FA520A6F1B1529099A7C2D97 /* Project object */;
+}

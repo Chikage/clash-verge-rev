@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/ruattd/swihomo-core",
+  "revision": "281b2d9f35c87a20f2737839f6a9be176e054957",
+  "archive_url": "https://codeload.github.com/ruattd/swihomo-core/tar.gz/281b2d9f35c87a20f2737839f6a9be176e054957",
+  "archive_sha256": "6ddd41eb7ac247f1ce2a2efa3e1dbbd6150b628b547e041f099de87a9b5c2aae",
+  "license": "GPL-3.0",
+  "go_version": "1.26.5",
+  "go_darwin_arm64_url": "https://go.dev/dl/go1.26.5.darwin-arm64.tar.gz",
+  "go_darwin_arm64_sha256": "efb87ff28af9a188d0536ef5d42e63dd52ba8263cd7344a993cc48dd11dedb6a",
+  "ios_minimum": "17.0"
+}
